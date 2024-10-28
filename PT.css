@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body {
+    font-family: 'EB Garamond';
+    background-color: #8DDCDC;
+  }
+  
+
+
+
+  .navbar {
+    background: #FFFDD0;
+    height: 120px;
+    width: 100%;
+  }
+  
+  .navbar .logo{
+    margin-right:470px;
+    font-size: 50px;
+    display: inline-block;
+  }
+
+  .navbar ul {
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+  }
+  
+  
+  .navbar ul li {
+    display: inline-block;
+    line-height: 120px;
+    margin: 0 5px;
+  }
+  
+  
+  .navbar ul li a {
+    color: black;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  
+  .navbar a:hover {
+    color: white;
+    background: black;
+    transition: .5s;
+  }
+  
+  .navbar li:link{
+    color: black;
+  }
+
+
+  
+  img {
+    float:left;
+    width: 240px;
+    height:240px;
+    position:absolute;
+    top: -20px;
+    left: 25px;
+  
+  }
+  
+  @media(max-width: 768px) {
+    .img {
+      width: 100%;
+    }
+  }
+  
+
+  /* Footer */
+  .container-bot { 
+    background-color: #FFFDD0; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+    height: 120px;
+    padding: 40px 0;
+  } 
+
+.container-bot ul li a {
+    color: black;
+  
+  }
+
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .footer-grid .DomainName {
+    display: flex;
+    font-size: 30pt;
+    position: relative;
+    left: 10px;
+    bottom: 40px;    
+  }
+
+  .DomainName{
+    color: black;
+  }
+
+  .footer-grid .Explore {
+    font-size: 12pt;
+    position: relative;
+    margin-left: 20%;
+    margin-bottom: 3%;
+
+  }
+  
+  .footer-grid .Social {
+    font-size: 12pt;
+    position: relative;
+    right: -30%;
+    margin-bottom: 8%;
+  }
+
+  .Email-Submit{
+    position: relative;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+
+
+
+  .container-bot .btn {
+    background: black;
+    display: flex;
+    padding: 10px 10px;
+    color: white;
+    font-weight: 200;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+  }
+  
+  .container-bot input[type='email'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #D9D9D9;
+  }
+
+  .text-sm {
+    font-size: 1.0rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+  }
+  
+  
