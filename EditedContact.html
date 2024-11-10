@@ -7,7 +7,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--Font Style-->   
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
+<!--Font Awesome for icons-->
+<link
+rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+<!--Style Sheets-->
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
   <!-- Navbar -->
   <header class="navbar">
     <img src="C:\Users\kobeg\Downloads\Oraclebonz_edited.png" alt="Logo" class="logo-img">
@@ -52,21 +64,74 @@
       </form>
     </div>
   </div>
+  
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-left">
-      <p>OracleBonz.com</p>
-    </div>
-    <div class="footer-center">
-      <h3>Sign up with your email to earn a free copy of the novella</h3>
-      <input type="email" placeholder="Email address">
-      <button type="submit">Submit</button>
-    </div>
-    <div class="footer-right">
-      <p>Explore</p>
-      <p>About | Works | Contact</p>
-      <p>Follow Me: Email | Facebook | Booktok</p>
+  <footer class="container-bot">
+    <div class="footer-grid">
+      
+      <div class = "DomainName">
+        <li><a href="EditedContact.html">T. Kamman.com</a></li>
+      </div>
+
+      
+      <div class = "Explore">
+        <h4>Explore</h4>
+      <ul>
+        <li><a href="HP.html">Home</a></li>
+        <li><a href="Aboutpg.html">About</a></li>
+        <li><a href="Workspg.html">Works</a></li>
+        <li><a href="EditedContact.html">Contact</a></li>
+      </ul>
+      </div>
+
+      <div class = "Social">
+        <h4>Follow Me</h4>
+      <ul>
+        <li><a href="mailto:alaya.scott@g.fmarion.edu?subject=Hello, Dr.Herzog!&body=Greetings, my name is ">Email</a></li>
+        <li><a href="https://www.facebook.com/teresa.herzog.55">Facebook</a></li>
+        <li><a href="https://www.tiktok.com/login">Booktok</a></li>
+      </ul>
+      </div>
+
+      <div class="Email-Submit">
+          <p class="text-sm">
+            Enter your email to receive a free copy of the novella.
+          </p>
+          <form action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="a27e727e-a442-446b-b3d8-a76cec87dbd2">
+        
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <input type="email" name="email" required>
+        
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        
+            <button type="submit">Submit Form</button>
+
+
+            <!--Email-->
+            <script>
+                function checkEmail() {
+                    var email = document.getElementById('txtEmail');
+                    var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    if (!filter.test(email.value)) {
+                        alert('Please provide a valid email address');
+                        email.focus;
+                        return false;
+                        
+                    }
+                    else
+                    alert('Thank you, your submission has been recieved');
+                }
+            </script>
+        </form>
+
     </div>
   </footer>
 
