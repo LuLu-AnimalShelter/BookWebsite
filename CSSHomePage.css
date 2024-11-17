@@ -1,0 +1,81 @@
+/*Style page*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    font-family: 'EB Garamond';
+  }
+
+  .topnavbar {
+    background: #FFFDD0;
+    height: 120px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+  }
+
+  .topright{
+    list-style-type: none;
+    
+  }
+
+  .nav-container{
+    display: flex;
+  }
+
+ .topright li{
+  display: inline-block;
+ }
+
+.topright li a{
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  color: #333;
+  padding: 14px 16px;
+text-transform: uppercase;
+}
+
+
+
+
+  .botnavbar{
+    background: #FFFDD0;
+    height: 120px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+  }
+
+
+  img {
+    float:left;
+    width: 240px;
+    height:240px;
+    position:absolute;
+    top: -20px;
+    left: 25px;
+  
+  }
+  
+  @media(max-width: 768px) {
+    .img {
+      width: 100%;
+    }
+  }
+  
+  .DomainName {
+    position: absolute;
+    bottom: 85px;
+    left: 10px;
+  }
+
+  
