@@ -240,7 +240,7 @@ a:hover {
 }
 
 /* Media Queries for Mobile Adjustments */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .navbar {
         flex-direction: column;
         height: auto;
