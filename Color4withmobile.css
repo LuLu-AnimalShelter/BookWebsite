@@ -52,7 +52,7 @@ a:hover {
 
 .navbar ul li a {
     font-size: 20px;
-    color: #ffffff; /* White for navbar links */
+    color: #ffffff; 
     padding: 10px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -60,8 +60,8 @@ a:hover {
 }
 
 .navbar ul li a:hover {
-    background-color: #dba158; /* Warm golden color for background hover */
-    color: #543c54; /* Purple text on hover for contrast */
+    background-color: #dba158; 
+    color: #543c54; 
 }
 
 /* Logo Styling */
@@ -76,7 +76,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     padding: 40px;
-    gap: 20px; /* Gap between sections for clarity */
+    gap: 20px; 
 }
 
 .main-content .follow-me {
@@ -106,7 +106,7 @@ a:hover {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background-color: #dba158; /* Use the warm golden color for icons */
+    background-color: #dba158; 
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -114,11 +114,11 @@ a:hover {
 /* Contact Form */
 .contact-form {
     flex: 2;
-    background-color: #ffffff; /* White for a bright and clean form */
+    background-color: #ffffff; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for form */
-    color: #262836; /* Charade for dark form text */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    color: #262836; 
     max-width: 100%; /* Max-width to fit small screens */
     order: 2; /* Display contact form second on mobile */
 }
@@ -129,15 +129,15 @@ a:hover {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #8e96b1; /* Bali Hai for light border */
-    background-color: #f5f5f5; /* Light gray for input background */
-    color: #262836; /* Charade for input text */
+    border: 1px solid #8e96b1; 
+    background-color: #f5f5f5; 
+    color: #262836; 
 }
 
 .contact-form button {
     padding: 10px 20px;
-    background-color: #dba158; /* Warm golden color for button background */
-    color: #ffffff; /* White text for clarity */
+    background-color: #dba158; 
+    color: #ffffff; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -145,12 +145,12 @@ a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #543c54; /* Purple hover for the button */
+    background-color: #543c54; 
 }
 
 /* Footer */
 .container-bot {
-    background-color: #543c54; /* Eggplant for a cohesive purple footer */
+    background-color: #543c54; 
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -163,12 +163,12 @@ a:hover {
 }
 
 .container-bot ul li a {
-    color: #dba158; /* Warm golden for footer links */
+    color: #dba158; 
     transition: color 0.3s;
 }
 
 .container-bot ul li a:hover {
-    color: white; /* White on hover for clear contrast */
+    color: white; 
 }
 
 .footer-grid {
@@ -185,13 +185,13 @@ a:hover {
     font-size: 30pt;
     position: relative;
     left: 10px;
-    bottom: 40px;
-    color: #ffffff; /* White for strong contrast in footer */
+    bottom: 30px;
+    color: #ffffff; 
 }
 
 .footer-grid .Explore, .footer-grid .Social {
     font-size: 12pt;
-    color: #ffffff; /* White text in footer sections */
+    color: #ffffff; 
     position: relative;
     margin-bottom: 3%;
 }
@@ -205,10 +205,10 @@ a:hover {
 }
 
 .container-bot .btn {
-    background: #dba158; /* Warm golden for footer buttons */
+    background: #dba158; 
     display: flex;
     padding: 10px 10px;
-    color: #543c54; /* Purple text for contrast */
+    color: #543c54; 
     font-weight: 200;
     text-decoration: none;
     border-radius: 10px;
@@ -218,17 +218,17 @@ a:hover {
 }
 
 .container-bot .btn:hover {
-    background-color: #262836; /* Dark hover for footer buttons */
+    background-color: #262836; 
     color: white;
 }
 
 .container-bot input[type='email'] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #8e96b1; /* Bali Hai for input border */
+    border: 1px solid #8e96b1; 
     border-radius: 5px;
-    background: #ffffff; /* White for clean input background */
-    color: #262836; /* Charade for input text */
+    background: #ffffff; 
+    color: #262836; 
 }
 
 .text-sm {
@@ -236,7 +236,7 @@ a:hover {
     line-height: 1.4;
     font-weight: normal;
     margin: 10px 0 5px;
-    color: #716077; /* Salt Box for small details */
+    color: #716077; 
 }
 
 /* Media Queries for Mobile Adjustments */
