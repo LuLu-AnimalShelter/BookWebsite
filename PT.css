@@ -1,0 +1,538 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body {
+    font-family: 'EB Garamond';
+    background-color: #c5d4e5;
+    overflow: scroll;
+  }
+
+  html {
+    height:100%;
+  }
+  
+  /*Pop-up button*/
+  .popup {
+  display: none;
+  background-color: #8e96b1;
+  border: 10px;
+  border-color: #563957;
+  border-style:solid;
+  width: 400px;
+  height:400px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 2px;
+  font-family: "EB garamond";
+  color: white;
+  display: none;
+  text-align:center;
+  padding: 30px;
+  font-size: x-large;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #8e96b1;
+}
+
+/* Full-width input fields */
+.form-container input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #e0a558;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+b{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+ 
+
+
+/*Navigation bar*/
+  .navbar {
+    background: #563957;
+    height: 150px;
+    width: 100%;
+    top: 0;
+    
+  }
+  
+  .navbar .logo{
+    display: flex;
+    margin-right:500px;
+    font-size: 50px;
+    display: inline-block;
+  }
+
+  .navbar ul {
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+  }
+  
+
+  .navbar ul li {
+    display: inline-block;
+    line-height: 120px;
+    margin: 0 5px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    font-size: 23px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  .navbar a:hover {
+    color: black;
+    background: #e0a558;
+    transition: .5s;
+  }
+  
+  .navbar li:link{
+    color: black;
+  }
+  
+  .logo img {
+    float:left;
+    width: 220px;
+    height:220px;
+    position:absolute;
+    top: 20px;
+    left: 60px;
+    border: 5px solid #e0a558;
+    border-radius: 50%;
+  }
+
+  .navbar h1 {
+    color: white;
+    font-family: 'EB Garamond';
+    position: absolute;
+    left: 300px;
+    top: 30px;
+    font-size: 60px;
+    margin:0;
+    }
+  
+  @media(max-width: 768px) {
+    .img {
+      width: 100%;
+    }
+  }
+  
+
+  /* Footer */
+  .footer-grid { 
+    background-color: #563957; 
+    justify-content: space-around; 
+    align-items: center; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+    height: 150px;
+    color: white;
+    font-family: 'EB Garamond';
+  }
+
+.footer-grid ul li a {
+  font-size: 18px;
+    color: white;
+  
+  }
+
+  /*.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+  }*/
+  
+  .footer-grid .DomainName {
+    display: flex;
+    font-size: 30pt;
+    position: absolute;
+    left: 12px;
+    bottom: 100px;
+    text-shadow: 2px 2px 5px gray;
+  }
+
+    .footer-grid .Explore {
+  font-size: 16pt;
+  position: absolute;
+  left: 720px;
+  bottom: 12px;
+  text-shadow: 2px 2px 5px gray;
+  }
+  
+  .footer-grid .Social {
+  font-size: 16pt;
+  position: absolute;
+  right: 900px;
+  bottom: 38px;
+  text-shadow: 2px 2px 5px gray;
+  }
+
+  .Email-Submit{
+    position: absolute;
+    right: 20px;
+    bottom: 55px;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 2px 2px 5px gray;
+
+  }
+
+  .footer-grid .submit {
+    display: flex;
+    padding: 10px 10px;
+    color: black;
+    font-weight: 200;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+  }
+  
+  .footer-grid input[type='email'] {
+    width: 230px;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #D9D9D9;
+  }
+
+  .footer-grid .button {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    cursor:pointer;
+    width: 100px; 
+    height: 30px;
+  }
+
+  .text-sm {
+    font-weight: normal;
+    padding-bottom: 20px;
+  }
+  
+  /*Home Page CSS*/
+  .HPgreeting{
+    color: #563957;
+    position: absolute;
+    left: 190px;
+    font-family: 'EB Garamond';
+    top: 250px;
+    font-size: 35pt;
+    font-style: italic;
+    text-decoration: underline;
+  }  
+
+  .HPGroundAbove {
+    background-color: lightgrey;
+    width: 530px;
+    height: 300px;
+    padding: 36px;
+    left: 200px;
+    top: 300px;
+    box-shadow: 5px 5px;
+    position: absolute;
+    font-size: 21px;
+    margin-bottom: 400px;
+  }
+
+  .HPGroundAbove p{
+  font-style: italic;
+    font-size: 20pt;
+  }
+
+  .HPGroundAbove text{
+    margin-left: 30px;
+    }
+
+  .HPGroundAbove img{
+    height:500px;
+    width: 500px;
+    left: 600px;
+    top: -90px;
+    position:absolute;
+    box-shadow: 5px 5px;
+
+  }
+
+  /*About Page CSS*/
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    position:absolute;
+    width: 530px;
+    height: 490px;
+    left:610px;
+    top: 20px;
+    border-radius: 50%;
+    box-shadow: 5px 5px;
+
+  }
+  
+  .overlay-text {
+    background-color: lightgrey;
+    width: 400px;
+    height: 390px;
+    padding: 36px;
+    left: 370px;
+    top: 240px;
+    box-shadow: 5px 5px;
+    position: absolute;
+    font-size: 15.2px;
+  }
+  
+  .overlay-text p{
+    text-align: left;
+    font-size: 25px;
+    color: black;
+  }
+
+  .overlay-text text{
+    margin-left: 30px;
+  }
+
+  /*Works Page CSS*/
+.worksgreeting{
+  color: #563957;
+  position: absolute;
+  left: 190px;
+  font-family: 'EB Garamond';
+  top: 250px;
+  font-size: 35pt;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+  .GroundAbove {
+    background-color: lightgrey;
+    width: 530px;
+    height: 300px;
+    padding: 36px;
+    left: 200px;
+    bottom: -1050px;
+    box-shadow: 5px 5px;
+    position: absolute;
+    font-size: 21px;
+    margin-bottom: 400px;
+  }
+
+  .GroundAbove p{
+  font-style: italic;
+    font-size: 20pt;
+  }
+
+  .GroundAbove text{
+    margin-left: 30px;
+    }
+
+
+  .GroundAbove img{
+    height:500px;
+    width: 500px;
+    left: 600px;
+    top: -90px;
+    position:absolute;
+    box-shadow: 5px 5px;
+
+  }
+
+  .NewLeaf {
+    background-color: lightgrey;
+    width: 530px;
+    height: 300px;
+    padding: 36px;
+    left: 200px;
+    top: 450px;
+    box-shadow: 5px 5px;
+    position: absolute;
+    font-size: 21px;
+  }
+  
+
+  .NewLeaf p{
+  font-style: italic;
+    font-size: 20pt;
+  }
+
+  .NewLeaf text{
+    margin-left: 30px;
+    }
+
+
+  .NewLeaf img{
+    height:500px;
+    width: 500px;
+    left: 600px;
+    top: -90px;
+    position:absolute;
+    box-shadow: 5px 5px;
+
+  }
+
+  /*Workspage CSS*/
+  /* Main Content */
+.main-content {
+  display: flex;
+  padding: 40px;
+}
+
+.main-content .follow-me {
+  flex: 1;
+}
+
+
+
+.follow-me ul {
+  list-style: none;
+}
+
+.follow-me ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.follow-me ul li a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #262836; /* Charade for clear text */
+}
+
+.follow-me ul li a::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #dba158; /* Use the warm golden color for icons */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 2;
+  background-color: #ffffff; /* White for a bright and clean form */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for form */
+  color: #262836; /* Charade for dark form text */
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #8e96b1; /* Bali Hai for light border */
+  background-color: #f5f5f5; /* Light gray for input background */
+  color: #262836; /* Charade for input text */
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #dba158; /* Warm golden color for button background */
+  color: #ffffff; /* White text for clarity */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #543c54; /* Purple hover for the button */
+}
+
+
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}
