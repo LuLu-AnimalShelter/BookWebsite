@@ -8,42 +8,76 @@
 
 body {
   font-family: 'EB Garamond';
-  background-color: #007373;
+  background-color: #c5d4e5;
 }
 
 /*Pop-up button*/
-.popup{
-  background-color: #ffffff;
-  border: 10px;
-  border-color: black;
-  border-style:solid;
-  width: 350px;
-  height:300px;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  left: 50%;
-  top: 50%;
-  border-radius: 8px;
-  font-family: "EB garamond";
-  display: none;
-  text-align:left;
+.popup {
+display: none;
+background-color: #8e96b1;
+border: 10px;
+border-color: #563957;
+border-style:solid;
+width: 400px;
+height:400px;
+position: absolute;
+transform: translate(-50%,-50%);
+left: 50%;
+top: 50%;
+border-radius: 2px;
+font-family: "EB garamond";
+color: white;
+display: none;
+text-align:center;
+padding: 30px;
+font-size: x-large;
 }
-.popup button{
-  display: block;
-  margin:  0 0 20px auto;
-  background-color: transparent;
-  font-size: 30px;
-  color: #c5c5c5;
-  border: none;
-  outline: none;
-  cursor: pointer;
+
+
+/* Add styles to the form container */
+.form-container {
+max-width: 300px;
+padding: 10px;
+background-color: #8e96b1;
 }
-.popup p{
-  font-size: 14px;
-  text-align: justify;
-  margin: 20px 0;
-  line-height: 25px;
+
+/* Full-width input fields */
+.form-container input[type=email] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
 }
+
+/* When the inputs get focus, do something */
+.form-container input[type=email]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+background-color: black;
+color: white;
+padding: 16px 20px;
+border-radius: 5px;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+background-color: #e0a558;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;
+}
+
 
 b{
   display: block;
@@ -61,9 +95,10 @@ b{
 
 /*Navigation bar*/
 .navbar {
-  background: #5d3a60;
-  height: 120px;
+  background: #563957;
+  height: 150px;
   width: 100%;
+
 }
 
 .navbar .logo{
@@ -86,19 +121,17 @@ b{
   margin: 0 5px;
 }
 
-
 .navbar ul li a {
   color: white;
-  font-size: 20px;
+  font-size: 23px;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
 }
 
-
 .navbar a:hover {
-  color: white;
-  background: black;
+  color: black;
+  background: #e0a558;
   transition: .5s;
 }
 
@@ -106,19 +139,27 @@ b{
   color: black;
 }
 
-
-
 .logo img {
   float:left;
-  width: 200px;
-  height:200px;
+  width: 240px;
+  height:240px;
   position:absolute;
-  top: 10px;
-  left: 25px;
+  top: 20px;
+  left: 60px;
+  border: 5px solid #e0a558;
   border-radius: 50%;
-
-
 }
+
+.Toptitle {
+color: white;
+font-family: 'EB Garamond';
+position: fixed;
+left: 350px;
+top: 50px;
+font-size: 60px;
+}
+
+
 
 @media(max-width: 768px) {
   .img {
@@ -129,19 +170,21 @@ b{
 
 /* Footer */
 .container-bot { 
-  background-color: #FFFDD0; 
+  background-color: #563957; 
   display: flex; 
   justify-content: space-around; 
   align-items: center; 
   position: fixed; 
   bottom: 0; 
   width: 100%;
-  height: 120px;
+  height: 155px;
   padding: 40px 0;
-} 
+  color: white;
+  font-family: 'EB Garamond';
+}
 
 .container-bot ul li a {
-  color: black;
+  color: white;
 
 }
 
@@ -155,48 +198,47 @@ b{
 }
 
 
+
+
 .footer-grid .DomainName {
   display: flex;
   font-size: 30pt;
-  position: relative;
-  left: 10px;
-  bottom: 40px;    
+  position: fixed;
+  left: 20px;
+  bottom: 95px;
+  text-shadow: 2px 2px 5px gray;
 }
 
-.DomainName{
-  color: black;
-}
+
 
 .footer-grid .Explore {
-  font-size: 12pt;
-  position: relative;
-  margin-left: 20%;
-  margin-bottom: 3%;
-
+  font-size: 14pt;
+  position: fixed;
+  left: 675px;
+  bottom: 15px;
+  text-shadow: 2px 2px 5px gray;
 }
 
 .footer-grid .Social {
-  font-size: 12pt;
-  position: relative;
-  right: -30%;
-  margin-bottom: 8%;
+  font-size: 14pt;
+  position: fixed;
+  right: 770px;
+  bottom: 40px;
+  text-shadow: 2px 2px 5px gray;
 }
 
 .Email-Submit{
-  position: relative;
-  margin-right: 25px;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  font-size: 20px;
   font-weight: normal;
 }
 
-
-
-.container-bot .btn {
-  background: black;
+.container-bot .submit {
   display: flex;
   padding: 10px 10px;
-  color: white;
+  color: black;
   font-weight: 200;
   text-decoration: none;
   border-radius: 10px;
@@ -206,38 +248,60 @@ b{
 }
 
 .container-bot input[type='email'] {
-  width: 100%;
+  width: 230px;
+  height: 45px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background: #D9D9D9;
 }
 
+.container-bot .button {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  cursor:pointer;
+  width: 100px; 
+  height: 30px;
+}
+
 .text-sm {
-  font-size: 1.0rem;
-  line-height: 1.4;
   font-weight: normal;
-  margin: 10px 0 5px;
+  padding-bottom: 20px;
 }
 
 /*About Page CSS*/
 .Bio {
   background-color: lightgrey;
-  width: 500px;
-  height: 500px;
-  padding: 50px;
-  margin-left: 405px;
-  margin-top: 110px;
+  width: 600px;
+  height: 520px;
+  padding: 35px;
+  margin-left: 350px;
+  margin-top: 90px;
   box-shadow: 5px 5px;
   position: fixed;
-  font-size: larger;
+  font-size: 23px;
 }
 
+.Bio p{
+  font-size: 33px;
+  color: black;
+}
+
+.Bio text{
+  margin-left: 1px;
+}
+
+
+
 .photo img{
+  position:fixed;
   width: 350px;
   height: 350px;
-  margin-left:1200px;
-  margin-top: 170px;
+  left:1000px;
+  top: 400px;
   border-radius: 50%;
   box-shadow: 5px 5px;
 

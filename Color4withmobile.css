@@ -25,8 +25,8 @@ a:hover {
 
 /* Navbar */
 .navbar {
-    background: #543c54; 
-    height: 120px;
+    background: #563957; 
+    height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -39,24 +39,32 @@ a:hover {
     font-size: 50px;
     color: #ffffff; 
 }
-
+.navbar .logo{
+    display: flex;
+    margin-right:500px;
+    font-size: 50px;
+    display: inline-block;
+  }
+  
 .navbar ul {
     display: flex;
     gap: 20px;
     flex-wrap: wrap; /* Wrap for smaller screens */
+    float: right;
+    text-align: center;
 }
 
 .navbar ul li {
     list-style: none;
+    
 }
 
 .navbar ul li a {
-    font-size: 20px;
-    color: #ffffff; 
-    padding: 10px;
+    color: white;
+    font-size: 23px;
+    padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
-    transition: color 0.3s, background-color 0.3s;
 }
 
 .navbar ul li a:hover {
@@ -66,9 +74,18 @@ a:hover {
 
 /* Logo Styling */
 .logo-img {
-    width: 150px;
-    height: 150px;
+    width: 240px;
+    height: 240px;
     border-radius: 50%;
+    border: 5px solid #e0a558;
+}
+.Toptitle {
+color: white;
+font-family: 'EB Garamond';
+position: fixed;
+left: 350px;
+top: 50px;
+font-size: 60px;
 }
 
 /* Main Content */
@@ -83,6 +100,7 @@ a:hover {
     flex: 1;
     min-width: 250px; /* Ensures a minimum width for smaller screens */
     order: 1; /* Display "Follow Me" section first on mobile */
+    margin-top: 35px;
 }
 
 .follow-me ul {
@@ -157,19 +175,20 @@ a:hover {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 155px;
+    height: 170px;
     padding: 40px 0;
     flex-wrap: wrap; /* Allow wrapping for mobile */
 }
 
 .container-bot ul li a {
-    color: #dba158; 
+    color: #ffffff; 
     transition: color 0.3s;
 }
 
 .container-bot ul li a:hover {
     color: white; 
 }
+
 
 .footer-grid {
     display: grid;
@@ -187,20 +206,22 @@ a:hover {
     left: 10px;
     bottom: 30px; /*Changed to 30 */
     color: #ffffff; 
+    text-shadow: 2px 2px 5px gray;
 }
 
 .footer-grid .Explore, .footer-grid .Social {
-    font-size: 12pt;
+    font-size: 14pt;
     color: #ffffff; 
     position: relative;
     margin-bottom: 3%;
+    text-shadow: 2px 2px 5px gray;
 }
 
-.Email-Submit {
+.Email-Submit{
     position: relative;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
+    right: 20px;
+    bottom: 40px;
+    font-size: 20px;
     font-weight: normal;
 }
 
@@ -223,12 +244,12 @@ a:hover {
 }
 
 .container-bot input[type='email'] {
-    width: 100%;
+    width: 230px;
+    height: 45px;
     padding: 10px;
-    border: 1px solid #8e96b1; 
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background: #ffffff; 
-    color: #262836; 
+    background: #D9D9D9;
 }
 
 .text-sm {
@@ -236,7 +257,7 @@ a:hover {
     line-height: 1.4;
     font-weight: normal;
     margin: 10px 0 5px;
-    color: #716077; 
+    color: #ffffff; 
 }
 
 /* Media Queries for Mobile Adjustments */
@@ -271,4 +292,5 @@ a:hover {
         height: auto;
         padding: 20px; /* Adjust padding for mobile */
     }
+    
 }
