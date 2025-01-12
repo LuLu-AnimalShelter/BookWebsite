@@ -9,7 +9,11 @@
 
 body {
     font-family: 'EB Garamond', serif;
-    background-color: #c5d4e5; 
+    background-color: #c5d4e5;
+    background-attachment: fixed; 
+    height: 150vh;
+    
+    
 }
 
 /* Links */
@@ -26,13 +30,14 @@ a:hover {
 /* Navbar */
 .navbar {
     background: #563957; 
-    height: 150px;
+    height: 155px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     flex-wrap: wrap; /* Allow wrapping for mobile screens */
+    position:fixed
 }
 
 .navbar .logo-text {
@@ -94,6 +99,9 @@ font-size: 60px;
     flex-wrap: wrap;
     padding: 40px;
     gap: 20px; 
+    padding-top: 165px;
+   
+    
 }
 
 .main-content .follow-me {
@@ -172,12 +180,12 @@ font-size: 60px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: relative;
     bottom: 0;
     width: 100%;
-    height: 170px;
+    height: 155px;
     padding: 40px 0;
-    flex-wrap: wrap; /* Allow wrapping for mobile */
+    flex-wrap: wrap; 
+    position:fixed
 }
 
 .container-bot ul li a {
@@ -259,6 +267,51 @@ font-size: 60px;
     margin: 10px 0 5px;
     color: #ffffff; 
 }
+.container-bot .button {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    cursor:pointer;
+    width: 100px; 
+    height: 30px;
+  }
+  
+  .container-bot .button:hover {
+    background-color: black;  /* Background changes to black on hover */
+    color: white;             /* Text color changes to white on hover */
+    transform: scale(1.05);   /* Slight zoom effect */
+  }
+  .follow-me ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.follow-me ul li {
+    margin-bottom: 10px;
+}
+
+.follow-me ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #543c54; /* Text color */
+    font-size: 18px; /* Adjust the font size */
+}
+
+.follow-me ul li a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px; /* Adjust icon size */
+    color: #dba158; /* Icon color */
+    transition: color 0.3s;
+}
+
+.follow-me ul li a:hover i {
+    color: #543c54; /* Icon color on hover */
+}
+ 
+
 
 /* Media Queries for Mobile Adjustments */
 @media only screen and (max-width: 1024px) {
@@ -292,5 +345,5 @@ font-size: 60px;
         height: auto;
         padding: 20px; /* Adjust padding for mobile */
     }
-    
+
 }
