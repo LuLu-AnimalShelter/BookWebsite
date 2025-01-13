@@ -1,0 +1,888 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+body {
+  height: 120%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'EB Garamond';
+  background-color: #c5d4e5;
+  overflow-x: hidden;
+}
+
+html{
+height: 150%;
+overflow: scroll;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/*body*/
+main {
+  flex: auto;
+  background-color: #c5d4e5;
+}
+
+
+/*popup*/
+/*Pop-up button*/
+.popup {
+  display: none;
+  background-color: #8e96b1;
+  border: 10px;
+  border-color: #563957;
+  border-style:solid;
+  width: 400px;
+  height:400px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 60%;
+  border-radius: 2px;
+  font-family: "EB garamond";
+  color: white;
+  display: none;
+  text-align:center;
+  padding: 30px;
+  font-size: x-large;
+  position: fixed;
+  z-index: 999;
+}
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #8e96b1;
+}
+
+/* Full-width input fields */
+.form-container input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #e0a558;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+b{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+ 
+
+
+/*top-navigation*/
+.navbar {
+  background: #563957;
+  height: 180px;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  white-space:nowrap;
+
+}
+
+.navbar ul {
+  float: right;
+  margin-right: 20px;
+  text-align: center;
+}
+
+
+.navbar ul li {
+  display: inline-block;
+  line-height: 190px;
+  margin: 0 5px;
+}
+
+.navbar ul li a {
+  color: white;
+  font-size: 23px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.navbar a:not(.closebtn):hover {
+  color: black;
+  background: #e0a558;
+  transition: .5s;
+}
+
+.navbar li:link{
+  color: black;
+}
+
+.logo img {
+  float:left;
+  width: 230px;
+  height:230px;
+  position:absolute;
+  top: 40px;
+  left: 60px;
+  border: 5px solid #e0a558;
+  border-radius: 50%;
+}
+
+ .navbar .titlename {
+  color: white;
+  font-family: 'EB Garamond';
+  position: absolute;
+  left: 300px;
+  top: 45px;
+  font-size: 40px;
+  margin:0;
+  }
+
+  .sidepanel  {
+  display: none;    
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+    }
+    
+  .sidepanel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: black;
+      display: block;
+      transition: 0.3s;
+    }
+    
+  .sidepanel a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidepanel .closebtn {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      font-size: 36px;
+    }
+    
+    .openbtn {
+      display: none;
+      font-size: 40px;
+      cursor: pointer;
+      background-color: #563957;
+      color: white;
+      border-style: none;
+      padding: 2px 7px;
+      position: absolute;
+      right:30px;
+      top: 60px;
+      transition: transform .2s;
+
+
+    }
+    
+    .openbtn:hover {
+      
+      -ms-transform: scale(0.5); /* IE 9 */
+      -webkit-transform: scale(0.5); /* Safari 3-8 */
+      transform: scale(1.2);       
+    }
+
+
+    .logo2 #perslogo2{
+      display: none;
+    }
+
+
+    .signup{
+      display: none;
+    }
+
+
+  @media (min-width:681px) and (max-width: 1150px) {
+      .navbar ul li a {
+          display:none;
+      }
+
+      .sidepanel{
+          display: block;
+      }
+
+      .openbtn {
+          display: block;
+      }
+
+    }
+
+
+.topnav {
+  display:none;
+  overflow: hidden;
+  background-color: #563957;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+
+}
+
+
+.logo2 #perslogo2{
+  display: none;
+}
+
+
+/*Media Queries*/
+@media only screen and (max-width: 680px) {
+.navbar #perslogo {
+  display:none;
+}
+
+.navbar .main-menu{
+  display: none;
+}
+
+.navbar{
+  display: none;
+}
+
+.logo2 img{
+  display: block;
+  float:left;
+width: 110px;
+height:110px;
+position:absolute;
+top: 5px;
+left: 25px;
+border: 5px solid #e0a558;
+border-radius: 50%;
+z-index: 999;
+
+}
+
+
+.mobile-container {
+  width: 100%;
+  height: 200px;
+  top: 0;
+  background: #563957;
+  height: 180px;
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+.topnav {
+  display: block;
+  overflow-x: hidden;
+
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  font-family: 'EB Garamond';
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  font-size: 33px;
+  transition: transform .2s;
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(0.5); /* Safari 3-8 */
+  transform: scale(1.2);      
+}
+
+.topnav a:not(.icon):hover {
+  background-color: #e0a558;
+  color: black;
+}
+
+.topnav a.active{
+  pointer-events: none;
+}
+
+.topnav .active{
+  width: 100%;
+  background-color: #563957;
+  height: 120px;
+  font-size: 40px;
+  margin-left: 130px;
+  bottom: 10px;
+  font-size: 60px;
+  font-weight: bold;
+
+  }
+}
+
+/*Bottom nav Media Queries*/
+.smallmenu{
+  display: none;
+}
+
+
+
+
+/* Footer */
+.container-bot{
+  background-color: #563957; 
+  height: 240px;
+  width: 100%;
+  color: white;
+  font-family: 'EB Garamond';
+  justify-content: space-between; 
+  overflow-x: hidden;
+  bottom: 0;
+}
+
+.container-bot ul li a {
+  font-size: 20px;
+  color: white;
+  
+  }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #563957;
+  height: 210px;
+  gap: 5px;
+  padding:3px;
+}
+
+
+.flex-container > div {
+  background-color: #563957;
+  width: 320px;
+  margin: 2px;
+  font-size: 30px;
+  position:relative;
+}
+
+.flex-container #fb1 {
+  background-color: #563957;
+  text-align: left;
+  text-shadow: 2px 2px 5px gray;
+  line-height: 35px;
+  font-size: 33pt;;
+
+}
+
+.flex-container #fb2 {
+  background-color: #563957;
+  font-size: 18pt;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+}
+
+.flex-container #fb3 {
+  background-color: #563957;
+  font-size: 18pt;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+  margin-left: -40px;
+}
+
+
+.flex-container #fb4 {
+  background-color: #563957;
+  width:440px;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: 2px 2px 5px gray;
+  text-align: left;
+  line-height: 30px;
+}
+
+.flex-container #fb4 .submit {
+  padding: 10px 10px;
+  color: black;
+  font-weight: 200;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.flex-container #fb4 input[type='email'] {
+  width: 260px;
+  height: 45px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #D9D9D9;
+}
+
+.flex-container #fb4 .button {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  cursor:pointer;
+  width: 100px; 
+  height: 30px;
+}
+
+.text-sm {
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+
+
+
+
+/*Mobile Navigation*/
+.smallmenu{
+  display:none;
+  justify-content: center;
+  margin-top: -100px;
+}
+
+nav.primary-navigation {
+	 margin: 0 auto;
+	 display: block;
+	 padding: 120px 0 0 0;
+	 text-align: center;
+	 font-size: 16px;
+}
+ nav.primary-navigation ul li {
+	 list-style: none;
+	 margin: 0 auto;
+	 border-left: 2px solid #e0a558;
+	 display: inline-block;
+	 padding: 0 50px;
+	 position: relative;
+	 text-decoration: none;
+	 text-align: center;
+	 font-family: 'EB Garamond';
+
+}
+ nav.primary-navigation li a {
+  font-size: 25pt;
+	 color: white;
+}
+
+nav .dropdown li a {
+  color: black;
+  font-size: 18pt;
+
+}
+
+ nav.primary-navigation li a:hover {
+	 color: #e0a558;
+}
+ nav.primary-navigation li:hover {
+	 cursor: pointer;
+}
+ nav.primary-navigation ul li ul {
+	 visibility: hidden;
+	 opacity: 0;
+	 position: absolute;
+	 padding-left: 0;
+	 left: 0;
+	 display: none;
+	 background: white;
+}
+ nav.primary-navigation ul li:hover > ul, nav.primary-navigation ul li ul:hover {
+	 visibility: visible;
+	 opacity: 1;
+	 display: block;
+	 min-width: 250px;
+	 text-align: left;
+	 padding-top: 20px;
+	 box-shadow: 0px 3px 5px -1px #ccc;
+
+}
+ nav.primary-navigation ul li ul li {
+	 clear: both;
+	 width: 100%;
+	 text-align: left;
+	 margin-bottom: 20px;
+	 border-style: none;
+}
+ nav.primary-navigation ul li ul li a:hover {
+	 padding-left: 10px;
+	 border-left: 2px solid #e0a558;
+	 transition: all 0.3s ease;
+}
+ a {
+	 text-decoration: none;
+}
+ a:hover {
+	 color: #e0a558;
+}
+ ul li ul li a {
+	 transition: all 0.5s ease;
+}
+ 
+.smallmenu{
+  display: none;
+}
+
+
+/*Media Queries*/
+@media only screen and (max-width: 1049px){
+  .container-bot {
+    background: #563957;
+    height: 280px;
+  }
+
+  .flex-container{
+    width: 500px;
+    position: absolute;
+    bottom:-360px;
+    left: 10px;
+    height: 150px;
+    overflow-x: hidden;
+}
+
+
+   #fb1{
+    display: none;
+  }
+
+  #fb2{
+    display: none;
+
+  }
+
+  #fb3{
+    display: none;
+  }
+
+  #fb4{
+    display: block;
+    width: 15px;
+  }
+
+  
+  .text-sm {
+    font-weight: normal;
+    padding-bottom: 20px;
+    font-size: 19pt;
+  }
+
+  
+
+
+}
+
+
+
+/*Media Queries*/
+@media only screen and (max-width: 1174px) /*and (min-width: 750px)*/ {
+  .container-bot {
+    background-color: #563957;
+    /*background:black;*/
+    height: 370px;
+    overflow-x: hidden;
+  }
+
+  .flex-container{
+    display:none;
+    width: 500px;
+    position: absolute;
+    bottom: -350px;
+    left: 30px;
+    height: 150px;
+    overflow-x: hidden;
+}
+
+
+   #fb1{
+    display: none;
+  }
+
+  #fb2{
+    display: none;
+
+  }
+
+  #fb3{
+    display: none;
+  }
+
+  #fb4{
+    display: block;
+    width: 15px;
+  }
+
+  
+  .text-sm {
+    font-weight: normal;
+    padding-bottom: 20px;
+    font-size: 19pt;
+  }
+
+
+
+  .smallmenu{
+    display:block;
+  }
+
+  nav.primary-navigation ul li {
+    padding: 0 80px;
+  
+ }
+
+ 
+ 
+
+}
+
+/*Container-bot Media Queries */
+@media only screen and (max-width: 1400px) and (min-width: 1175px) {
+  .container-bot {
+    background: #563957;
+    height: 280px;
+  }
+
+  .container-bot ul li a {
+    color: white;
+  }
+
+  .flex-container{
+    justify-content:center;
+  }
+
+  .flex-container{
+    display:none;
+  }
+
+  .flex-container #fb1 {
+    background-color: #563957;
+    height: 50px;
+    position: absolute;
+    bottom: -165px;
+    left: 40px;
+    font-size: 35pt;
+
+  }
+
+  .flex-container #fb2 {
+    background-color: #563957;
+    height: 160px;
+    position: absolute;
+    right: 420px;
+    width: 150px;
+    bottom: -275px;
+    font-size: 22pt;
+  }
+
+  .flex-container #fb3 {
+    background-color: #563957;
+    position: absolute;
+    height: 130px;
+    right: 150px;
+    width: 130px;
+    bottom: -245px;
+    font-size: 22pt;
+
+  }
+
+  .flex-container #fb4 {
+    background-color: #563957;
+    position: absolute;
+    height: 120px;
+    bottom: -350px;
+    left: 30px;
+  }
+
+  .text-sm {
+    font-weight: normal;
+    font-size: 22pt;
+  }
+
+  .container-bot ul li a {
+    font-size: 25px;
+    color: white;
+    
+    }
+
+    .smallmenu{
+      display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Container-bot Media Queries */
+@media only screen and (min-width: 1600px) {
+  .container-bot {
+    /*background: red;*/
+    background-color: #563957;
+  }
+
+  .flex-container{
+    justify-content:space-between;
+  }
+
+  .container-bot ul li a {
+    font-size: 25px;
+    color: white;
+  }
+
+  .flex-container #fb1 {
+    background-color: #563957;
+    text-align: left;
+    text-shadow: 2px 2px 5px gray;
+    line-height: 35px;
+    font-size: 35pt;
+    
+  }
+
+  .flex-container #fb2 {
+    background-color: #563957;
+    font-size: 21pt;
+    text-shadow: 2px 2px 5px gray;
+    text-align: center;
+  }
+  
+  .flex-container #fb3 {
+    background-color: #563957;
+    font-size: 21pt;
+    text-shadow: 2px 2px 5px gray;
+    text-align: center;
+    margin-left: -100px;
+  }
+
+  .flex-container #fb4 {
+    background-color: #563957;
+    width:440px;
+    font-size: 25px;
+    font-weight: normal;
+    text-shadow: 2px 2px 5px gray;
+    text-align: left;
+    line-height: 30px;
+    position: relative;
+    left: -110px;
+  }
+
+  .navbar ul li a {
+    font-size: 27px;
+  }
+
+  .navbar .titlename {
+    color: white;
+    font-family: 'EB Garamond';
+    position: absolute;
+    left: 300px;
+    top: 45px;
+    font-size: 45px;
+    margin:0;
+    }
+}
+
+
+/*About Page*/
+/*About Page CSS*/
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  position:absolute;
+  width: 600px;
+  height: 640px;
+  left:230px;
+  top: 110px;
+  border-radius: 50%;
+  box-shadow: 5px 5px;
+
+}
+
+.overlay-text {
+  background-color: white;
+  width: 630px;
+  height: 510px;
+  padding: 36px;
+  left: 640px;
+  top: 370px; 
+  box-shadow: 5px 5px;
+  position: absolute;
+  font-size: 24px;
+}
+
+.overlay-text p{
+  text-decoration: underline;
+
+}
+
+.overlay-text text{
+  margin-left: 30px;
+  
+}

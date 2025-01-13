@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Website</title>
+
+<!--Font Style-->   
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+<!--Font Awesome for icons-->
+<link
+rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+
+<!--Style Sheets-->
+<link rel="stylesheet" href="WP.css" />
+</head>
+<body>
+
+
+<!--Header-->
+<nav class="navbar" id="navbar">
+    <div class="titlename" id="titlename"> 
+        <h1> T. Kamman </h1>
+    </div>
+    <div class="logo">
+        <img src="Oraclebonz_edited.png" id="perslogo" alt="perslogo" />
+      </a>
+    </div>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="HP.html">Home</a>
+          </li>
+          <li>
+            <a href="Aboutpg.html">About</a>
+          </li>
+          <li>
+            <a href="Workspg.html">Books</a>
+          </li>
+          <li>
+            <a href="Contactpg.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="HP.html">Home</a>
+        <a href="Aboutpg.html">About</a>
+        <a href="Workspg.html">Books</a>
+        <a href="Contactpg.html">Contact</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()">☰</button>  
+      
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+      </script>
+</nav>
+
+
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav"> 
+      <div class="logo2">
+          <img src="Oraclebonz_edited.png" id="2perslogo" alt="2perslogo" />
+          
+        </a>
+      </div>
+    <a href="HP.html" class="active">T. Kamman</a>
+    <div id="myLinks">
+      <a href="HP.html">Home</a>
+      <a href="Aboutpg.html">About</a>
+      <a href="Workspg.html">Books</a>
+      <a href="Aboutpg.html">Contact</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      ☰
+    </a>
+  </div>
+   <!--End smartphone / tablet look-->
+  </div>
+  
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+<!--End Header-->
+
+<!--Body-->
+
+
+
+
+<main>
+WorksPage.html
+
+<div class="Books-title">
+  <p> Books </p>
+  </div>
+
+  <div class="GroundAbove">
+      <p> 'The Ground Above the Stars' </p>
+        <text>Two cynical children of a failed parapsychologist discover that Earth is just one of the Eight Realms, kingdoms on the eve of declaring war. As the conflict undermines physical laws and brings the threat of otherworldly invaders, the two defend the home they love and each other.</text>
+        <img src="Ground Above Cover.jpeg" alt="bio-photo" id="GACpic"/>
+  </div>
+
+
+
+
+  <div class="NewLeaf">
+      <p> 'The New Leaf Altar' </p>
+        <text>Fow centuries, on behalf of the Eight Realms, Omnis Dominum has proudly protected Earth from the scourge of magic. But during his most recent mission, he’s not so sure the other Realms have Earth’s interests at heart. How will this guardian honor the truth yet keep his promises?</text>
+        <img src="New Leaf Cover no Spine.JPG" alt="bio-photo" id="GACpic"/>
+
+  </div>
+
+
+</main>
+
+
+
+
+<!--End Body-->
+
+
+<!--Footer-->
+<footer class="container-bot">
+  <div class="flex-container">
+    <div class="flexbox" id="fb1">
+        <li><a href="play.html" style="color:white">T. Kamman.com</a></li>
+    </div>
+
+    <div class="flexbox" id="fb2">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="HP.html">Home</a></li>
+        <li><a href="Aboutpg.html">About</a></li>
+        <li><a href="Workspg.html">Books</a></li>
+        <li><a href="Contactpg.html">Contact</a></li>
+      </ul>
+
+    </div>
+
+    <div class="flexbox" id="fb3">
+      <h4>Follow Me</h4>
+        <ul>
+          <li><a href="mailto:kammanteresa@gmail.com?subject=Hello, Dr.Herzog!&body=Greetings,">Email</a></li>
+          <li><a href="https://www.facebook.com/teresa.herzog.55">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/login">Booktok</a></li>
+        </ul>
+    </div>
+
+
+    <div class="flexbox" id="fb4">
+      <p class="text-sm">
+        Sign up with your email to earn a free copy of the novella!
+      </p>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+         <!--Replace with your Access Key-->
+        <input type="hidden" name="access_key" value="7f89bd6e-abe4-4b8f-8514-6ec183cef6dd">
+    
+         <!--Form Inputs. Each input must have a name="" attribute-->
+         <input type="email" name="email" class="emailbox" placeholder="Email Address" required>
+    
+         <!--Honeypot Spam Protection--> 
+         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+         <!--Custom Confirmation / Success Page-->
+         <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html">
+    
+        <button class = "button" type="submit">Submit</button>
+
+       <!--Email-->
+        <script>
+            function checkEmail() {
+                var email = document.getElementById('txtEmail');
+                var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if (!filter.test(email.value)) {
+                    alert('Please provide a valid email address');
+                    email.focus;
+                    return false;
+                    
+                }
+                else
+                alert('Thank you, your submission has been recieved');
+            }
+        </script>
+      </form>
+    </div>
+  </div>
+
+<div class="smallmenu" id="smallmenu">
+  <nav role="navigation" class="primary-navigation">
+    <ul>
+      <li><a href="HP.html">T. Kamman</a></li>
+      <li><a>Explore &dtrif;</a>
+        <ul class="dropdown">
+          <li><a href="HP.html">Home</a></li>
+          <li><a href="Aboutpg.html">About</a></li>
+          <li><a href="Workspg.html">Books</a></li>
+          <li><a href="Contactpg.html">Contact</a></li>
+        </ul>
+      </li>
+      <li><a>Follow Me &dtrif;</a>
+        <ul class="dropdown">
+          <li><a href="mailto:kammanteresa@gmail.com?subject=Hello, Dr.Herzog!&body=Greetings,">Email</a></li>
+          <li><a href="https://www.facebook.com/teresa.herzog.55">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/login">Booktok</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+</footer>
+<!--End Footer-->
+<!--Mobile Footer-->
+
+</body>
+</html>
+
+<!--Books
+<div class="Books-title">
+  <p> Books </p>
+  </div>
+
+  <div class="GroundAbove">
+      <p> 'The Ground Above the Stars' </p>
+        <text>Two cynical children of a failed parapsychologist discover that Earth is just one of the Eight Realms, kingdoms on the eve of declaring war. As the conflict undermines physical laws and brings the threat of otherworldly invaders, the two defend the home they love and each other.</text>
+        <img src="Ground Above Cover.jpeg" alt="bio-photo" id="GACpic"/>
+  </div>
+
+
+
+
+  <div class="NewLeaf">
+      <p> 'The New Leaf Altar' </p>
+        <text>Fow centuries, on behalf of the Eight Realms, Omnis Dominum has proudly protected Earth from the scourge of magic. But during his most recent mission, he’s not so sure the other Realms have Earth’s interests at heart. How will this guardian honor the truth yet keep his promises?</text>
+        <img src="New Leaf Cover no Spine.JPG" alt="bio-photo" id="GACpic"/>
+
+  </div>
