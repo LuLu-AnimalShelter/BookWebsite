@@ -1,0 +1,1347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  background-color: #563957;
+  margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+
+html, body {
+max-width: 100%;
+overflow-x: hidden;
+}
+
+/*Header class*/
+.navbar /*header*/ {
+  /*background-color: gray;
+  height: 200px;*/
+  background: #563957;
+  height: 180px;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  white-space:nowrap;
+}
+
+
+.main-menu ul {
+  float: right;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.main-menu ul li {
+  display: inline-block;
+  line-height: 190px;
+  margin: 0 5px;
+}
+
+.main-menu ul li a {
+  color: white;
+  font-size: 23px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.navbar a:not(.closebtn):hover {
+  color: black;
+  background: #e0a558;
+  transition: .5s;
+}
+
+.navbar li:link{
+  color: black;
+}
+
+.logo img {
+  float:left;
+  width: 230px;
+  height:230px;
+  position:absolute;
+  top: 40px;
+  left: 60px;
+  border: 5px solid #e0a558;
+  border-radius: 50%;
+}
+
+ .navbar .titlename {
+  color: white;
+  font-family: 'EB Garamond';
+  position: absolute;
+  left: 300px;
+  top: 45px;
+  font-size: 30px;
+  margin:0;
+  }
+
+  .smicons i{
+    text-decoration: none;
+    position: absolute;
+    color: white;
+    top: 10px;
+    right: 30px;
+    font-size: 20pt;
+  }
+
+  .smicons #facebook{
+    position: absolute;
+    right: 70px;
+    font-size: 30px;
+    top: 12px;
+  }
+
+  .smicons #gmail{
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+    top: 13px;
+  }
+
+/*Curtain menu*/ 
+.overlay {
+  display:none;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(240, 240, 240);
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.overlay-content {
+  position: relative;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.click{
+  display: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  right:30px;
+  top: 60px;
+  transition: transform .2s;
+}
+        
+.click:hover {
+  -ms-transform: scale(0.5); /* IE 9 */
+  -webkit-transform: scale(0.5); /* Safari 3-8 */
+  transform: scale(1.2);       
+}
+
+
+  /*Side panelcode*/
+  .sidepanel  {
+    display: none;    
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  
+      }
+      
+    .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+      }
+      
+    .sidepanel a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 36px;
+      }
+
+      .openbtn {
+        display: none;
+        font-size: 40px;
+        cursor: pointer;
+        background-color: #563957;
+        color: white;
+        border-style: none;
+        padding: 2px 7px;
+        position: absolute;
+        right:30px;
+        top: 60px;
+        transition: transform .2s;
+      }
+      
+      .openbtn:hover {
+        -ms-transform: scale(0.5); /* IE 9 */
+        -webkit-transform: scale(0.5); /* Safari 3-8 */
+        transform: scale(1.2);       
+      }
+
+      .logo2 #perslogo2{
+        display: none;
+      }
+  
+      /*Mobile view*/
+.mobile-container {
+  display: none;
+  width: 100%;
+  height: 200px;
+  top: 0;
+  background: #563957;
+  height: 180px;
+  width: 100%;
+  overflow-x: hidden;
+}
+      
+      /*Media queries*/
+      @media (min-width:681px) and (max-width: 1150px) {
+        .navbar{
+        }
+        
+          .navbar ul li a {
+            display:none;
+        }
+        
+        .click{
+          display: block;
+        }
+        
+          .overlay{
+            display: block;
+        }
+  
+      }
+
+
+      /*Media Queries*/
+@media only screen and (max-width: 680px) {
+  .navbar #perslogo {
+    display:none;
+  }
+  
+  .navbar .main-menu{
+    display: none;
+  }
+  
+  .navbar{
+    display: none;
+  }
+  
+  .mobile-container{
+    display:block;
+    }
+  
+    .mobile-container a.active{
+      pointer-events: none;
+    }
+    
+    .mobile-container .active{
+      position: absolute;
+      width: 100%;
+      background-color: #563957;
+      height: 120px;
+      font-size: 40px;
+      margin-left: 145px;
+      top: 50px;
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+      }
+  
+      .logo2 img{
+        display: block;
+        float:left;
+      width: 110px;
+      height:110px;
+      position:absolute;
+      top:30px;
+      left: 25px;
+      border: 5px solid #e0a558;
+      border-radius: 50%;
+      z-index: 1;
+      }
+    
+      .sidebar {
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      }
+      
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: black;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidebar .twoclosebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 45px;
+        margin-left: 50px;
+      }
+      
+      .twoopenbtn {
+        right:23px;
+        top: 52px;      
+        position: absolute;
+        font-size: 40px;
+        cursor: pointer;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        background-color: #563957;
+      }
+      
+      .twoopenbtn:hover {
+        transition-duration: 0.1s;
+      }
+      
+     .twoopenbtn:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 4em;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.5s;
+        box-shadow: 0 0 10px 40px white;
+      }
+      
+      .twoopenbtn:active:after {
+        box-shadow: 0 0 0 0 white;
+        position: absolute;
+        border-radius: 4em;
+        left: 0;
+        top:0;
+        opacity: 1;
+        transition: 0s;
+      }
+  
+  }
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+
+#middle{
+  height:1800px;
+  background-color:#c5d4e5;
+  overflow-x: hidden;
+  max-width: 100%;
+
+}
+
+/*popup*/
+/*Pop-up button*/
+.popup {
+display: none;
+background-color: #8e96b1;
+border: 10px;
+border-color: #563957;
+border-style:solid;
+width: 400px;
+height:400px;
+position: absolute;
+transform: translate(-50%,-50%);
+left: 50%;
+top: 60%;
+border-radius: 2px;
+font-family: "EB garamond";
+color: white;
+display: none;
+text-align:center;
+padding: 30px;
+font-size: x-large;
+position: fixed;
+z-index: 999;
+}
+
+/* Add styles to the form container */
+.form-container {
+max-width: 300px;
+padding: 10px;
+background-color: #8e96b1;
+}
+
+/* Full-width input fields */
+.form-container input[type=email] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=email]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+background-color: black;
+color: white;
+padding: 16px 20px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+font-size: 14px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+background-color: #e0a558;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover {
+opacity: 1;
+}
+
+
+b{
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: 10px auto;
+  text-align: center;
+  background-color: black;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+
+
+
+
+
+
+/*Bottom navigation area*/
+.container-bot{
+  background-color: #563957; 
+  height: 250px;
+  width: 100%;
+  color: white;
+  font-family: 'EB Garamond';
+  justify-content: space-between; 
+  overflow-x: hidden;
+  bottom: 0;
+  max-width: 100%;
+}
+
+.container-bot ul li a {
+  font-size: 20px;
+  color: white;
+  
+  }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #563957;
+  height: 220px;
+  gap: 15px;
+  padding: 12px;
+}
+
+
+.flex-container > div {
+  background-color: #563957;
+  width: 300px;
+  margin: 2px;
+  font-size: 30px;
+  position:relative;
+}
+
+.flex-container #fb1 {
+  background-color: #563957;
+  text-align: left;
+  text-shadow: 2px 2px 5px gray;
+  line-height: 35px;
+  font-size: 33pt;
+  /*background-color: red;*/
+  height: 100px;
+
+
+}
+
+.flex-container #fb2 {
+  background-color: #563957;
+  font-size: 18pt;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+  /*background-color: aqua;*/
+}
+
+.flex-container #fb3 {
+  background-color: #563957;
+  font-size: 18pt;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+  
+  /*background-color: greenyellow;*/
+}
+
+
+.flex-container #fb4 {
+  background-color: #563957;
+  width:400px;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: 2px 2px 5px gray;
+  text-align: left;
+  /*line-height: 30px;*/
+  /*background-color: purple;*/
+  height: 150px;
+
+}
+
+.flex-container #fb4 .submit {
+  padding: 10px 10px;
+  color: black;
+  font-weight: 200;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.flex-container #fb4 input[type='email'] {
+  width: 250px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #c5d4e5;
+  margin-left: 10px;
+}
+
+.flex-container #fb4 .button {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  cursor:pointer;
+  width: 100px; 
+  height: 30px;
+}
+
+.text-sm {
+  font-weight: normal;
+  padding-bottom: 20px;
+}
+  
+  
+  
+  
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (min-width: 1180px) and (max-width: 1385px) {
+    .container-bot {
+      /*background: red;*/
+      height: 330px;
+    }
+
+    .flex-container{
+      height: 340px;
+    }
+
+
+    .flex-container #fb1 {
+      height: 60px;
+    }
+
+    .flex-container #fb2 {
+      left: 220px;
+
+    }
+
+    .flex-container #fb3 {
+      left: 280px;
+    }
+
+    .flex-container #fb4 {
+      top: -25px;
+      width: 450px;
+      height: 120px;
+    }
+  }
+
+@media only screen and (min-width: 980px) and (max-width: 1179px) {
+      .container-bot {
+        /*background: blue;*/
+        height: 350px;
+      }  
+
+      .flex-container{
+        height: 340px;
+      }
+    
+      .flex-container #fb3{
+        height: 130px;
+      }
+
+      .flex-container #fb2{
+        height: 154px;
+        left: 320px;
+        top: 155px;
+      }
+    }
+
+
+    @media only screen and (min-width: 750px) and (max-width: 979px) {
+      .container-bot{
+        /*background-color: green;*/
+        height: 350px;
+      }
+
+      .flex-container{
+        height: 340px;
+      }
+
+      .flex-container #fb2 {
+        left: 161px;
+      }
+  
+      .flex-container #fb3 {
+        left: 480px;
+
+      }
+  
+      .flex-container #fb4 {
+        right: 320px;
+      }
+
+    }
+
+
+    @media only screen and (min-width: 650px) and (max-width: 749px) {
+      .container-bot{
+        /*background-color: black;*/
+        height: 500px;
+
+      }
+
+      .flex-container{
+        height: 430px;
+      }
+
+      .flex-container #fb2 {
+      }
+  
+      .flex-container #fb3 {
+        left: 310px;
+        top: 40px;
+        width: 320px;
+      }
+  
+      .flex-container #fb4 {
+        left: 5px;
+        top: -90px;
+      }
+
+    }
+
+    @media only screen and (max-width: 645px) {
+      .container-bot{
+        height: 630px;
+      }
+
+      .flex-container{
+        justify-content: center;
+        gap: 35px;
+      }
+
+      .flex-container #fb1{
+        height: 45px;
+      }
+
+    }
+
+    @media only screen and (max-width: 375px) {
+      .mobile-container{
+        background-color: #563957;
+      
+      }
+      .logo2 img{
+        width: 80px;
+        height:80px;
+        position:absolute;
+        top:45px;
+        left: 15px;
+        border: 3px solid #e0a558;
+      }
+
+      .mobile-container .active{
+        font-size: 37px;
+        left: -40px;
+        top: 60px;
+        height: 60px;
+      }
+
+      .twoopenbtn {
+        background-color: #563957;
+        padding: 2px 1px;
+        font-size: 35px;
+        top: 60px;
+        right: 30px;
+        
+      } 
+      
+      .container-bot{
+        height: 630px;
+      }
+
+      .flex-container{
+        justify-content: center;
+        gap: 35px;
+      }
+
+      .flex-container #fb1{
+        font-size: 44px;
+        height: 45px;
+      }
+
+      .flex-container #fb2{
+        top: -15px;
+      }
+      
+      .flex-container #fb2 h4{
+        font-size: 22px;
+
+      }
+
+      
+      .flex-container #fb3{
+        top: -22px;
+      }
+
+      .flex-container #fb3 h4{
+        font-size: 22px;
+      }
+
+      .flex-container #fb4{
+        text-align: center;
+        top: -22px;
+        height: 180px;
+        font-size: 17px;
+      }
+
+      .flex-container #fb4 input[type='email']{
+        text-align: center;
+      }
+
+      .flex-container #fb4 .button {
+      margin-top: 10px;
+      }
+
+      
+    }
+
+          @media only screen and (max-width: 335px) {
+            .mobile-container{
+        background-color: #563957;
+      
+      }
+      .logo2 img{
+        width: 80px;
+        height:80px;
+        position:absolute;
+        top:45px;
+        left: 15px;
+        border: 3px solid #e0a558;
+      }
+
+      .mobile-container .active{
+        font-size: 31px;
+        left: -44px;
+        top: 63px;
+        height: 60px;
+      }
+
+      .twoopenbtn {
+        background-color: #563957;
+        padding: 2px 1px;
+        font-size: 35px;
+        top: 60px;
+        right: 25px;
+        
+      } 
+      
+      .container-bot{
+        height: 630px;
+      }
+
+      .flex-container{
+        justify-content: center;
+        gap: 35px;
+      }
+
+      .flex-container #fb1{
+        text-align: center;
+        font-size: 40px;
+        height: 45px;
+      }
+
+      .flex-container #fb2{
+        font-size: 18px;
+        top: -15px;
+      }
+      
+      .flex-container #fb2 h4{
+        font-size: 22px;
+
+      }
+
+      
+      .flex-container #fb3{
+        font-size: 18px;
+        top: -22px;
+      }
+
+      .flex-container #fb3 h4{
+        font-size: 22px;
+      }
+
+      .flex-container #fb4{
+        text-align: center;
+        top: -22px;
+        height: 180px;
+        font-size: 18px;
+      }
+
+      .flex-container #fb4 input[type='email']{
+        text-align: center;
+      }
+
+      .flex-container #fb4 .button {
+      margin-top: 10px;
+      }
+
+    }
+
+      
+          @media only screen and (max-width: 414px) {
+            .mobile-container{
+        background-color: #563957;
+      
+      }
+      .logo2 img{
+        width: 95px;
+        height:95px;
+        position:absolute;
+        top:45px;
+        left: 15px;
+        border: 3px solid #e0a558;
+      }
+
+      .mobile-container .active{
+        font-size: 40px;
+        left: -25px;
+        top: 63px;
+        height: 60px;
+      }
+
+      .twoopenbtn {
+        background-color: #563957;
+        padding: 2px 1px;
+        font-size: 40px;
+        top: 60px;
+        right: 29px;
+        
+      } 
+      
+      .container-bot{
+        height: 630px;
+      }
+
+      .flex-container{
+        justify-content: center;
+        gap: 35px;
+      }
+
+      .flex-container #fb1{
+        text-align: center;
+        font-size: 45px;
+        height: 45px;
+      }
+
+      .flex-container #fb2{
+        font-size: 22px;
+        top: -20px;
+      }
+      
+      .flex-container #fb2 h4{
+        font-size: 25px;
+
+      }
+
+      
+      .flex-container #fb3{
+        font-size: 22px;
+        top: -22px;
+      }
+
+      .flex-container #fb3 h4{
+        font-size: 25px;
+      }
+
+      .flex-container #fb4{
+        text-align: center;
+        top: -10px;
+        height: 180px;
+        font-size: 20px;
+      }
+
+      .flex-container #fb4 input[type='email']{
+        text-align: center;
+      }
+
+      .flex-container #fb4 .button {
+      margin-top: 10px;
+      }
+
+    }
+
+
+@media only screen and (max-width: 414px) {
+.twoopenbtn {
+font-size: 40px;
+right: 12px;
+
+  } 
+}
+
+
+@media only screen and (max-width: 430px) {
+   .mobile-container{
+        background-color: #563957;
+      
+      }
+      .logo2 img{
+        width: 95px;
+        height:95px;
+        position:absolute;
+        top:45px;
+        left: 15px;
+        border: 3px solid #e0a558;
+      }
+
+      .mobile-container .active{
+        font-size: 45px;
+        left: -25px;
+        top: 63px;
+        height: 60px;
+      }
+
+      .twoopenbtn {
+        background-color: #563957;
+        padding: 2px 1px;
+        font-size: 40px;
+        top: 65px;
+        right: 23px;
+        
+      } 
+      
+      .container-bot{
+        height: 630px;
+      }
+
+      .flex-container{
+        justify-content: center;
+        gap: 35px;
+      }
+
+      .flex-container #fb1{
+        text-align: center;
+        font-size: 45px;
+        height: 45px;
+      }
+
+      .flex-container #fb2{
+        font-size: 22px;
+        top: -20px;
+      }
+      
+      .flex-container #fb2 h4{
+        font-size: 25px;
+
+      }
+
+      
+      .flex-container #fb3{
+        font-size: 22px;
+        top: -22px;
+      }
+
+      .flex-container #fb3 h4{
+        font-size: 25px;
+      }
+
+      .flex-container #fb4{
+        text-align: center;
+        top: -10px;
+        height: 180px;
+        font-size: 20px;
+      }
+
+      .flex-container #fb4 input[type='email']{
+        text-align: center;
+      }
+
+      .flex-container #fb4 .button {
+      margin-top: 10px;
+      }
+
+  .flex-container #fb4 .text-sm {
+      font-size: 23px;
+      }
+}
+
+  @media only screen and (max-width: 390px) {
+   .mobile-container{
+        background-color: #563957;
+      
+      }
+      .logo2 img{
+        width: 90px;
+        height:90px;
+        position:absolute;
+        top:45px;
+        left: 15px;
+        border: 3px solid #e0a558;
+      }
+
+      .mobile-container .active{
+        font-size: 40px;
+        left: -30px;
+        top: 67px;
+        height: 60px;
+      }
+
+      .twoopenbtn {
+        background-color: #563957;
+        padding: 2px 1px;
+        font-size: 40px;
+        top: 65px;
+        right: 19px;
+        
+      } 
+      
+      .container-bot{
+        height: 630px;
+      }
+
+      .flex-container{
+        justify-content: center;
+        gap: 35px;
+      }
+
+      .flex-container #fb1{
+        text-align: center;
+        font-size: 45px;
+        height: 45px;
+      }
+
+      .flex-container #fb2{
+        font-size: 22px;
+        top: -20px;
+      }
+      
+      .flex-container #fb2 h4{
+        font-size: 25px;
+
+      }
+
+      
+      .flex-container #fb3{
+        font-size: 22px;
+        top: -22px;
+      }
+
+      .flex-container #fb3 h4{
+        font-size: 25px;
+      }
+
+      .flex-container #fb4{
+        text-align: center;
+        top: -10px;
+        height: 180px;
+        font-size: 20px;
+      }
+
+      .flex-container #fb4 input[type='email']{
+        text-align: center;
+      }
+
+      .flex-container #fb4 .button {
+      margin-top: 10px;
+      }
+
+  .flex-container #fb4 .text-sm {
+      font-size: 23px;
+      }
+}
+
+
+  @media only screen and (max-width: 412px) {
+      
+    .twoopenbtn {
+        background-color: #563957;
+        padding: 2px 1px;
+        font-size: 38px;
+        top: 67px;
+        right: 15px;
+      } 
+  }
+
+
+@media only screen and (max-width: 360px) {
+      .logo2 img{
+        width: 87px;
+        height:87px;
+        position:absolute;
+        top:45px;
+        left: 15px;
+        border: 3px solid #e0a558;
+      }
+
+      .mobile-container .active{
+        font-size: 37px;
+        left: -33px;
+        top: 67px;
+        height: 60px;
+      }
+
+      .twoopenbtn {
+        background-color: #563957;
+        padding: 2px 1px;
+        font-size: 35px;
+        top: 67px;
+        right: 15px;
+      } 
+
+  }
+
+  @media (min-width:681px) and (max-width: 1150px) {
+    .navbar ul li a {
+        display:none;
+    }
+
+    .sidepanel{
+        display: block;
+    }
+
+    .openbtn {
+        display: block;
+    }
+
+  }
+
+
+
+
+
+
+  /*Works page*/
+    .Books-title p{
+      color:#563957;
+        font-size: 90px;
+        position: absolute;
+        left: 160px;
+        top: 300px;
+        text-decoration: underline;
+    
+    }
+    
+      .NewLeaf {
+        background-color: white;
+        color:hsl(298, 21%, 28%);
+        width: 530px;
+        height: 400px;
+        padding: 36px;
+        left: 100px;
+        top: 1200px;
+        box-shadow: 5px 5px;
+        position: absolute;
+        font-size: 28px;
+      }
+    
+      .NewLeaf p{
+        font-style: italic;
+        font-size: 30pt;
+      }
+    
+      .NewLeaf text{
+        margin-left: 20px;
+        }
+    
+    
+      .NewLeaf img{
+        height:500px;
+        width: 500px;
+        left: 600px;
+        top: -25px;
+        position:absolute;
+        box-shadow: 5px 5px;
+    
+      }
+    
+      .GroundAbove {
+        background-color: white;
+        color:#563957;
+        width: 530px;
+        height: 400px;
+        padding: 36px;
+        left: 100px;
+        top: 520px;
+        position: absolute;
+        font-size: 28px;
+        box-shadow: 5px 5px;
+    
+      }
+      
+    
+      .GroundAbove p{
+      font-style: italic;
+        font-size: 30pt;
+      }
+    
+      .GroundAbove text{
+        margin-left: 20px;
+        }
+    
+    
+      .GroundAbove img{
+        height:500px;
+        width: 500px;
+        left: 600px;
+        top: -30px;
+        position:absolute;
+        box-shadow: 5px 5px;
+      }
+    
+
+
+      /*About Page CSS*/
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  position:absolute;
+  width: 590px;
+  height: 640px;
+  left:250px;
+  top: 210px;
+  border-radius: 50%;
+  box-shadow: 5px 5px;
+
+}
+
+.overlay-text {
+  background-color: white;
+  width: 630px;
+  height: 490px;
+  padding: 36px;
+  left: 610px;
+  top: 460px; 
+  box-shadow: 5px 5px;
+  position: absolute;
+  font-size: 24px;
+}
+
+.About-title p{
+  color:#563957;
+  font-size: 90px;
+  position: absolute;
+  left: 150px;
+  top: 240px;
+  text-decoration: underline;
+
+}
+
+.overlay-text text{
+  margin-left: 30px;
+}
+
+
+
