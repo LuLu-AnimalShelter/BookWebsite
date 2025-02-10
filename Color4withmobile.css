@@ -16,6 +16,7 @@ body {
     
 }
 
+
 /* Links */
 a {
     text-decoration: none;
@@ -78,12 +79,16 @@ a:hover {
 }
 
 /* Logo Styling */
-.logo-img {
+.logo img {
+    float:left;
     width: 240px;
-    height: 240px;
-    border-radius: 50%;
+    height:240px;
+    position:absolute;
+    top: 20px;
+    left: 60px;
     border: 5px solid #e0a558;
-}
+    border-radius: 50%;
+  }
 .Toptitle {
 color: white;
 font-family: 'EB Garamond';
@@ -281,7 +286,7 @@ font-size: 60px;
   .container-bot .button:hover {
     background-color: black;  /* Background changes to black on hover */
     color: white;             /* Text color changes to white on hover */
-    transform: scale(1.05);   /* Slight zoom effect */
+    transform: scale(1.05);   
   }
   .follow-me ul {
     list-style-type: none;
@@ -346,4 +351,52 @@ font-size: 60px;
         padding: 20px; /* Adjust padding for mobile */
     }
 
+    /* Hiding the logo for mobile screens */
+    .navbar .logo {
+        display: none;
+    }
+
+    /* Ensure social media icons are visible on mobile */
+    .follow-me ul {
+        display: flex;
+        flex-direction: column; /* Stack social media icons vertically */
+        align-items: center; /* Center the icons */
+        padding: 0;
+    }
+
+    .follow-me ul li {
+        margin-bottom: 10px;
+    }
+
+    .follow-me ul li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #543c54; /* Text color */
+        font-size: 18px; /* Adjust the font size */
+    }
+
+    .follow-me ul li a i {
+        margin-right: 10px; /* Space between icon and text */
+        font-size: 20px; /* Adjust icon size */
+        color: #dba158; /* Icon color */
+        transition: color 0.3s;
+    }
+
+    .follow-me ul li a:hover i {
+        color: #543c54; /* Icon color on hover */
+    }
+
+    /* Hiding unnecessary elements for mobile */
+    .footer-grid .DomainName,
+    .footer-grid .Explore,
+    .footer-grid .Social {
+        display: none;
+    }
+
+    .Email-Submit {
+        position: static; 
+        margin: 0 auto;
+        text-align: center;
+    }
 }
