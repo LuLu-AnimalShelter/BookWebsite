@@ -315,7 +315,13 @@ font-size: 60px;
 .follow-me ul li a:hover i {
     color: #543c54; /* Icon color on hover */
 }
- 
+/* Adjust the position of the Follow Me section */
+.main-content .follow-me {
+    margin-top: 150px; /* Adjust this value to move the Follow Me section lower */
+    flex: 1;
+    min-width: 250px;
+    order: 1;
+}
 
 
 /* Media Queries for Mobile Adjustments */
@@ -338,7 +344,7 @@ font-size: 60px;
 
     .main-content {
         flex-direction: column; /* Stack sections vertically */
-        padding: 20px; /* Adjust padding for smaller screens */
+        padding-top: 120px; /* Adjust padding for smaller screens */
     }
 
     .footer-grid {
@@ -359,9 +365,10 @@ font-size: 60px;
     /* Ensure social media icons are visible on mobile */
     .follow-me ul {
         display: flex;
-        flex-direction: column; /* Stack social media icons vertically */
+        flex-direction: row; /* Stack social media icons vertically */
         align-items: center; /* Center the icons */
         padding: 0;
+        gap: 5px;
     }
 
     .follow-me ul li {
@@ -373,11 +380,11 @@ font-size: 60px;
         align-items: center;
         text-decoration: none;
         color: #543c54; /* Text color */
-        font-size: 18px; /* Adjust the font size */
+        font-size: 14px; /* Adjust the font size */
     }
 
     .follow-me ul li a i {
-        margin-right: 10px; /* Space between icon and text */
+        margin-right: 8px; /* Space between icon and text */
         font-size: 20px; /* Adjust icon size */
         color: #dba158; /* Icon color */
         transition: color 0.3s;
@@ -386,7 +393,9 @@ font-size: 60px;
     .follow-me ul li a:hover i {
         color: #543c54; /* Icon color on hover */
     }
-
+    .follow-me ul li a::before {
+        content: none; /* Remove the black circles on mobile */
+    }
     /* Hiding unnecessary elements for mobile */
     .footer-grid .DomainName,
     .footer-grid .Explore,
@@ -399,4 +408,8 @@ font-size: 60px;
         margin: 0 auto;
         text-align: center;
     }
+    .main-content .follow-me {
+        margin-top: 0;
+}
+
 }
