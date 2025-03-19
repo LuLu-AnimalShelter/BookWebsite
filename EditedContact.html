@@ -24,7 +24,25 @@
       <img src="Oraclebonz_edited (1).png" alt="perslogo">
       <span class="logo-text"></span>
     </div>
+    <button class="twoopenbtn" onclick="twoopenNav()">☰</button>  
+    
+    
+    <script>
+    function twoopenNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function twocloseNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+   
+    </script>
+    <!-- Sidebar Menu (Hidden by Default) -->
+<div id="mySidebar" class="sidebar">
     <ul class="nav-links">
+      <a href="javascript:void(0)" class="twoclosebtn" onclick="twocloseNav()">×</a>
       <li><a href="HP.html">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Works</a></li>
@@ -56,6 +74,10 @@
         </li>
       </ul>
     </div>
+<!-- Custom Map Section -->
+<div class="map-container">
+  <img src="Map.jpg" alt="Custom Map" class="custom-map">
+</div>
 
     <!-- Contact Form -->
     <div class="contact-form">
@@ -124,6 +146,57 @@
       </div>
     </div>
   </footer>
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".contact-form form");
+        const messageInput = document.getElementById("message");
+        const submitButton = form.querySelector("button[type='submit']");
+        const limit = 10; // Max emails per day
+        const storageKey = "emailSubmissions";
+    
+        // List of banned words 
+        const bannedWords = ["fuck", "bitch", "shit" , "fuck", "bitch", "shit", "asshole", "bastard", "cunt", "damn", "dick", 
+  "fag", "motherfucker", "piss", "prick", "slut", "whore", "wanker", 
+  "cock", "balls", "bollocks", "twat", "pussy"]; 
+    
+        // Get current date & stored data
+        const today = new Date().toISOString().split("T")[0];
+        let submissions = JSON.parse(localStorage.getItem(storageKey)) || {};
+    
+        // Reset count if it's a new day
+        if (submissions.date !== today) {
+            submissions = { date: today, count: 0 };
+            localStorage.setItem(storageKey, JSON.stringify(submissions));
+        }
+    
+        // Check if the limit is reached
+        if (submissions.count >= limit) {
+            submitButton.disabled = true;
+            submitButton.innerText = "Daily Limit Reached";
+            submitButton.style.backgroundColor = "#888";
+        }
+    
+        form.addEventListener("submit", function (event) {
+            const messageText = messageInput.value.toLowerCase();
+    
+            // Check for profanity before increasing the count
+            for (let word of bannedWords) {
+                if (messageText.includes(word)) {
+                    event.preventDefault(); // Stop form submission
+                    alert("Your message contains inappropriate language. Please remove it before submitting.");
+                    return;
+                }
+            }
+    
+            // Only increase submission count if no profanity is detected
+            if (submissions.count < limit) {
+                submissions.count += 1;
+                localStorage.setItem(storageKey, JSON.stringify(submissions));
+            }
+        });
+    });
+    </script>
+    
+      
 </body>
 </html>
