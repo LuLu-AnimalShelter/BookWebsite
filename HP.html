@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Website</title>
+    
+    <!--Font Style-->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    
+    <!--Font Awesome for icons-->
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="PT.css" />
+    </head>
+<body>
+<!--Initital popup-->
+
+<div id="overlay"></div>
+<div class="popup" id="popup">
+  <form action="https://api.web3forms.com/submit" method="POST" class="form-container">
+    <p class = "welcome">Welcome to my website!
+      Please subscribe to receive a free copy of the novella!</p>
+
+     <!-- Replace with your Access Key  -->
+    <input type="hidden" name="access_key" value="a27e727e-a442-446b-b3d8-a76cec87dbd2">
+    <input type="email" placeholder="Enter Email" name="email" class="emailbox" required>
+
+     <!-- Honeypot Spam Protection  -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <div class="button-container">
+
+        <!-- Custom Confirmation / Success Page  -->
+         
+        <input type="hidden" name="redirect" value="http://127.0.0.1:5500/thankyoupage.html">
+    
+        <button type="submit" class="btn">Submit</button>
+        <button type="button" class="btn cancel" id="close-popup">Close</button>
+        
+    </div>
+  </form>
+</div> 
+
+  <!-- <button id="close-popup">Close</button> -->
+
+  <script>
+    function setCookie(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = "expires=" + date.toUTCString();
+      document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    function getCookie(name) {
+      const cookieName = name + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const cookieArray = decodedCookie.split(';');
+      for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) === ' ') {
+          cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(cookieName) === 0) {
+          return cookie.substring(cookieName.length, cookie.length);
+        }
+      }
+      return "";
+    }
+
+    function showPopup() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("popup").style.display = "block";
+        document.body.style.overflow = 'hidden'; // Disable background scrolling
+    }
+
+    function closePopup() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("popup").style.display = "none";
+        document.body.style.overflow = 'auto'; // Enable background scrolling
+        setCookie("popupShown", "true", 1); // Set cookie for 24 hours
+    }
+
+    window.onload = function() {
+      if (getCookie("popupShown") !== "true") {
+        showPopup();
+      }
+    };
+
+    document.getElementById("close-popup").addEventListener("click", closePopup);
+  </script>
+
+<!--End popup-->
+
+
+ <!--Header-->
+ <div class="navbar" id="navbar">
+  <div class="smicons" id="smicons"> 
+      <a href="https://www.facebook.com/teresa.herzog.55"><i class="fa-brands fa-fw fa-facebook fa-2x" id="facebook"></i></a>
+      <a href="mailto:kammanteresa@gmail.com?subject=Hello, Dr.Herzog!&body=Greetings,"><i class="fa-solid fa-envelope" id="gmail"></i></a>
+    </div>
+    <!--Normal Page-->
+    <div class="titlename" id="titlename"> 
+      <h1> T. Kamman </h1>
+  </div>
+  <div class="logo">
+    <div class="responsive">
+          <img src="Oraclebonz_edited.png" id="2perslogo" alt="2perslogo" class="OB"/>
+          <div class="desc" style="display: none;"></div>
+      </div> 
+  </div>   
+
+      <div class="clearfix"></div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+  
+      <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        
+        // Get all images and insert the clicked image inside the modal
+        // Get the content of the image description and insert it inside the modal image caption
+        var images = document.getElementsByClassName("OB");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var i;
+        for (i = 0; i < images.length; i++) {
+          images[i].onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.nextElementSibling.innerHTML;
+          }
+        }
+        </script>
+    <div class="main-menu">
+      <ul>
+        <li>
+          <a href="HP.html">Home</a>
+        </li>
+        <li>
+          <a href="Aboutpg.html">About</a>
+        </li>
+        <li>
+          <a href="Workspg.html">Books</a>
+        </li>
+        <li>
+          <a href="Contactpg.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+      <!--Normal Page End-->
+
+       <!--Normal Page with Curtain menu-->
+       <div id="myNav" class="curtain">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="curtain-content">
+            <a href="HP.html">Home</a>
+            <a href="Aboutpg.html">About</a>
+            <a href="Workspg.html">Works</a>
+            <a href="Contactpg.html">Contact</a>
+          </div>
+        </div>
+        <span class="click" onclick="openNav()">&#9776; </span>
+        
+        <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+      <!--End normal Page with Curtain menu-->
+</div>
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+      <div class="logo2">
+          <img src="Oraclebonz_edited.png" id="2perslogo" alt="2perslogo" />
+          
+      </div>
+    <a href="#logo" class="active">T. Kamman</a>
+   <!-- <h1>T. Kamman </h1> -->
+    <div id="myLinks">
+      <a href="HP.html">Home</a>
+      <a href="Aboutpg.html">About</a>
+      <a href="Workspg.html">Works</a>
+      <a href="Contactpg.html">Contact</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  </div>
+  
+  <!--Mobile Javascript-->
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+  <!-- End smartphone / tablet look -->
+   <div class="middle" id="HPmiddle" style="height: 1100px">
+
+      <div class="center">
+
+          <div id="newbook">
+          
+            <div class="upandcoming">  
+              <h1> Up and Coming </h1>
+                <h2> By Teresa Kamman </h2>
+            </div>
+
+            <div>  
+              <img src="thumbnail_The Ground Above The Stars finish 2 crop.jpg" id="nbpic"/>
+            </div>
+
+
+
+            <div> 
+              <a href="Workspg.html" class="button-class"> Learn More </a> 
+            </div>
+
+
+
+          </div>
+
+
+      </div>
+
+
+
+   </div>
+
+
+    <!-- <div class="newbook">  
+
+      <div class="upandcoming">  
+              <h1> Up and Coming </h1>
+                <h2> By Teresa Kamman </h2>
+      </div>
+
+      <div>  
+        <img src="thumbnail_The Ground Above The Stars finish 2 crop.jpg" id="nbpic"/>
+      </div>
+
+      <div> 
+        <a href="Workspg.html" class="button-class"> Learn More </a> 
+      </div>
+
+    </div>-->
+
+  
+
+<!--Footer-->
+<div class="container-bot" id="container-bot">
+  <div class="flex-container">
+    <div class="flexbox" id="fb1">
+        <li><a href="play.html" style="color:white">T. Kamman.com</a></li>
+    </div>
+
+    <div class="flexbox" id="fb2">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="HP.html">Home</a></li>
+        <li><a href="Aboutpg.html">About</a></li>
+        <li><a href="Workspg.html">Books</a></li>
+        <li><a href="Contactpg.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="flexbox" id="fb3">
+      <h4>Follow Me</h4>
+        <ul>
+          <li><a href="mailto:kammanteresa@gmail.com?subject=Hello, Dr.Herzog!&body=Greetings,">Email</a></li>
+          <li><a href="https://www.facebook.com/teresa.herzog.55">Facebook</a></li>
+          <li><a href="https://www.tiktok.com/login">Booktok</a></li>
+        </ul>
+    </div>
+
+
+    <div class="flexbox" id="fb4">
+      <p class="text-sm">
+        Sign up with your email to earn a free copy of the novella!
+      </p>
+      
+      <form method="POST" id="form">
+        <!--Replace with your Access Key-->
+       <input type="hidden" name="access_key" value="a27e727e-a442-446b-b3d8-a76cec87dbd2">
+       <input type="hidden" name="subject" value="New Submission from Web3Forms">
+    
+        <!--Form Inputs. Each input must have a name="" attribute-->
+        <input type="email" id="txtEmail" name="email" class="emailbox" placeholder="Email Address" required >
+    
+        <!--Honeypot Spam Protection-->
+        <input type="checkbox" name="botcheck" id="" style="display: none;">
+    
+        <!--Custom Confirmation / Success Page-->
+        <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html">
+    
+       <button class="button" type="submit" onclick="executeInOrder()">Submit</button>
+       
+    
+       <div id="result"></div>
+      </form>
+    
+      <!--Async functions-->
+      <script> 
+      async function checkEmail() {
+        console.log("First function executed");
+      }
+      
+      async function submitForm() {
+        console.log("Second function executed");
+      }
+      
+      async function executeInOrder() {
+        await checkEmail();
+        await submitForm();
+      }
+      
+      executeInOrder(); 
+    </script>
+    
+      <!--Script 1-->
+      <script>
+        function checkEmail() {
+            var email = document.getElementById('txtEmail');
+            var filter = /([a-zA-Z0-9]+)([\_\.\-{1}])?([a-zA-Z0-9]+)\@([a-zA-Z0-9]+)([\.])([a-zA-Z\.]+)/g;
+            if (!filter.test(email.value)) {
+                alert('Please provide a valid email address');
+                email.focus;
+                return false;
+                
+            }
+            else
+            alert('Thank you, your submission has been recieved');
+        }
+    </script>
+    
+      <!--Script 2-->
+    <script>
+      function submitForm(){
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      result.innerHTML = "Please wait..."
+    
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = json.message;
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong! Please refresh the page and try again. ";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+      }
+    </script>
+  
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
