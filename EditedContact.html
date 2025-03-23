@@ -196,7 +196,49 @@
         });
     });
     </script>
-    
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const emailForm = document.querySelector(".Email-Submit form");
+      if (!emailForm) return;
+  
+      const emailInput = emailForm.querySelector("input[type='email']");
+      const submitButton = emailForm.querySelector("button[type='submit']");
+      const apiKey = "69fc35d4765d381a6d47e2bff5c26116"; 
+  
+      emailForm.addEventListener("submit", async function (event) {
+          event.preventDefault(); // Stop form submission until validation is complete
+  
+          const emailValue = emailInput.value.trim();
+          const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  
+          if (!emailPattern.test(emailValue)) {
+              alert("Please enter a valid email address.");
+              emailInput.focus();
+              return;
+          }
+  
+          try {
+              // Call the API to check if the email domain exists
+              const response = await fetch(`https://api.apilayer.com/email_verification/check?email=${emailValue}&apikey=${apiKey}`);
+              const data = await response.json();
+  
+              if (!data.format_valid || !data.mx_found) {
+                  alert("This email domain does not exist. Please enter a valid email.");
+                  emailInput.focus();
+                  return;
+              }
+  
+              // If the email is valid, allow submission
+              emailForm.submit();
+  
+          } catch (error) {
+              alert("Error checking email. Please try again.");
+              console.error(error);
+          }
+      });
+  });
+  </script>
+  
       
 </body>
 </html>
