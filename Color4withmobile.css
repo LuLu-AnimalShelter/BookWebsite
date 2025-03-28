@@ -113,7 +113,7 @@ font-size: 60px;
     flex: 1;
     min-width: 250px; /* Ensures a minimum width for smaller screens */
     order: 1; /* Display "Follow Me" section first on mobile */
-    margin-top: 35px;
+    margin-top: 45px;
 }
 
 .follow-me ul {
@@ -122,7 +122,7 @@ font-size: 60px;
 
 .follow-me ul li {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 50px;
 }
 
 .follow-me ul li a {
@@ -317,7 +317,7 @@ font-size: 60px;
 }
 /* Adjust the position of the Follow Me section */
 .main-content .follow-me {
-    margin-top: 150px; /* Adjust this value to move the Follow Me section lower */
+    margin-top: 350px; /* Adjust this value to move the Follow Me section lower */
     flex: 1;
     min-width: 250px;
     order: 1;
@@ -404,7 +404,7 @@ font-size: 60px;
     }
 
     .follow-me ul li {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .follow-me ul li a {
