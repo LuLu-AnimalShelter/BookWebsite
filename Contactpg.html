@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Website</title>
+    
+    <!--Font Style-->   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    
+    <!--Font Awesome for icons-->
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="PT.css" />
+    </head>
+<body>
+
+<!--Header-->
+<div class="navbar" id="navbar">
+  <div class="smicons" id="smicons"> 
+      <a href="https://www.facebook.com/teresa.herzog.55"><i class="fa-brands fa-fw fa-facebook fa-2x" id="facebook"></i></a>
+      <a href="mailto:kammanteresa@gmail.com?subject=Hello, Dr.Herzog!&body=Greetings,"><i class="fa-solid fa-envelope" id="gmail"></i></a>
+    </div>
+    <!--Normal Page-->
+    <div class="titlename" id="titlename"> 
+      <h1> T. Kamman </h1>
+  </div>
+  <div class="logo">
+    <div class="responsive">
+          <img src="Oraclebonz_edited.png" id="2perslogo" alt="2perslogo" class="OB"/>
+          <div class="desc" style="display: none;"></div>
+      </div> 
+  </div>   
+
+      <div class="clearfix"></div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
+  
+      <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        
+        // Get all images and insert the clicked image inside the modal
+        // Get the content of the image description and insert it inside the modal image caption
+        var images = document.getElementsByClassName("OB");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var i;
+        for (i = 0; i < images.length; i++) {
+          images[i].onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.nextElementSibling.innerHTML;
+          }
+        }
+        </script>
+    <div class="main-menu">
+      <ul>
+        <li>
+          <a href="HP.html">Home</a>
+        </li>
+        <li>
+          <a href="Aboutpg.html">About</a>
+        </li>
+        <li>
+          <a href="Workspg.html#wrap">Books</a>
+        </li>
+        <li>
+          <a href="Contactpg.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+      <!--Normal Page End-->
+
+       <!--Normal Page with Curtain menu-->
+       <div id="myNav" class="curtain">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="curtain-content">
+            <a href="HP.html">Home</a>
+            <a href="Aboutpg.html">About</a>
+            <a href="Workspg.html#wrap">Works</a>
+            <a href="Contactpg.html">Contact</a>
+          </div>
+        </div>
+        <span class="click" onclick="openNav()">&#9776; </span>
+        
+        <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+      <!--End normal Page with Curtain menu-->
+</div>
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+      <div class="logo2">
+          <img src="Oraclebonz_edited.png" id="2perslogo" alt="2perslogo" />
+          
+        </a>
+      </div>
+    <a href="#logo" class="active">T. Kamman</a>
+   <!-- <h1>T. Kamman </h1> -->
+    <div id="myLinks">
+      <a href="HP.html">Home</a>
+      <a href="Aboutpg.html">About</a>
+      <a href="Workspg.html#wrap">Works</a>
+      <a href="Contactpg.html">Contact</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  </div>
+  
+  <!--Mobile Javascript-->
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
+  <!-- End smartphone / tablet look -->
+
+
+<!--Middle-->
+<div class="middle" id="ContactPageMiddle">
+  <div id="scrollToMeContact" style="position: absolute; top: 23%; left: 50%;"></div>
+    <script>
+      window.onload = function() {
+        var element = document.getElementById("scrollToMeContact");
+        element.scrollIntoView({behavior: "smooth"});
+      };
+      </script>
+    <!-- Main Content -->
+    <div class="main-content">
+
+      <!-- Follow Me Section -->
+      <div class="follow-me">
+        <h3>Follow Me!</h3>
+        <ul>
+          <li>
+            <a href="mailto:kammanteresa@gmail.com">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/teresa.herzog.55" target="_blank">
+              <i class="fab fa-facebook"></i> Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://tiktok.com" target="_blank">
+              <i class="fab fa-tiktok"></i> Booktok
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+  
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3>Submit your Email & Get a Free Novella!</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="0b3811bb-6a63-43f9-bfc5-678514592bd5">
+          
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="First Name" placeholder="Your first name.." required>
+          
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="Last Name" placeholder="Your last name.." required>
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" placeholder="Your email.." required>
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="Write something.." style="height:100px"></textarea>
+  
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+          <button type="submit"> Submit </button>
+        </form>
+            <!-- Fine Print -->
+      <p class="fine-print">Your email and message will not be shared with anyone besides the author.</p>
+    </form>
+      </div>
+    </div>  
+
+
+
+
+
+
+</div>
+<!--Footer-->
+<div class="container-bot" id="container-bot">
+        <div class="flex-container">
+          <div class="flexbox" id="fb1">
+              <li><a href="HP.html#navbar" style="color:white">T. Kamman.com</a></li>
+          </div>
+      
+          <div class="flexbox" id="fb2">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="HP.html">Home</a></li>
+              <li><a href="Aboutpg.html">About</a></li>
+              <li><a href="Workspg.html#wrap">Books</a></li>
+              <li><a href="Contactpg.html">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="flexbox" id="fb3">
+            <h4>Follow Me</h4>
+              <ul>
+                <li><a href="mailto:kammanteresa@gmail.com?subject=Hello, Dr.Herzog!&body=Greetings,">Email</a></li>
+                <li><a href="https://www.facebook.com/teresa.herzog.55">Facebook</a></li>
+                <li><a href="https://www.tiktok.com/login">Booktok</a></li>
+              </ul>
+          </div>
+        </div>
+
+        <copyright> &copy 2024 T. Kamman </copyright>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".contact-form form");
+      const messageInput = document.getElementById("message");
+      const submitButton = form.querySelector("button[type='submit']");
+      const limit = 10; // Max emails per day
+      const storageKey = "emailSubmissions";
+  
+      // List of banned words 
+      const bannedWords = ["fuck", "bitch", "shit" , "fuck", "bitch", "shit", "asshole", "bastard", "cunt", "damn", "dick", 
+"fag", "motherfucker", "piss", "prick", "slut", "whore", "wanker", 
+"cock", "balls", "bollocks", "twat", "pussy"]; 
+  
+      // Get current date & stored data
+      const today = new Date().toISOString().split("T")[0];
+      let submissions = JSON.parse(localStorage.getItem(storageKey)) || {};
+  
+      // Reset count if it's a new day
+      if (submissions.date !== today) {
+          submissions = { date: today, count: 0 };
+          localStorage.setItem(storageKey, JSON.stringify(submissions));
+      }
+  
+      // Check if the limit is reached
+      if (submissions.count >= limit) {
+          submitButton.disabled = true;
+          submitButton.innerText = "Daily Limit Reached";
+          submitButton.style.backgroundColor = "#888";
+      }
+  
+      form.addEventListener("submit", function (event) {
+          const messageText = messageInput.value.toLowerCase();
+  
+          // Check for profanity before increasing the count
+          for (let word of bannedWords) {
+              if (messageText.includes(word)) {
+                  event.preventDefault(); // Stop form submission
+                  alert("Your message contains inappropriate language. Please remove it before submitting.");
+                  return;
+              }
+          }
+  
+          // Only increase submission count if no profanity is detected
+          if (submissions.count < limit) {
+              submissions.count += 1;
+              localStorage.setItem(storageKey, JSON.stringify(submissions));
+          }
+      });
+  });
+  </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const emailForm = document.querySelector(".Email-Submit form");
+    if (!emailForm) return;
+
+    const emailInput = emailForm.querySelector("input[type='email']");
+    const submitButton = emailForm.querySelector("button[type='submit']");
+    const apiKey = "69fc35d4765d381a6d47e2bff5c26116"; 
+
+    emailForm.addEventListener("submit", async function (event) {
+        event.preventDefault(); // Stop form submission until validation is complete
+
+        const emailValue = emailInput.value.trim();
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!emailPattern.test(emailValue)) {
+            alert("Please enter a valid email address.");
+            emailInput.focus();
+            return;
+        }
+
+        try {
+            // Call the API to check if the email domain exists
+            const response = await fetch(`https://api.apilayer.com/email_verification/check?email=${emailValue}&apikey=${apiKey}`);
+            const data = await response.json();
+
+            if (!data.format_valid || !data.mx_found) {
+                alert("This email domain does not exist. Please enter a valid email.");
+                emailInput.focus();
+                return;
+            }
+
+            // If the email is valid, allow submission
+            emailForm.submit();
+
+        } catch (error) {
+            alert("Error checking email. Please try again.");
+            console.error(error);
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+
+
+
+
