@@ -78,7 +78,7 @@
 
     <!-- Contact Form -->
     <div class="contact-form">
-      <h3>Send me a message</h3>
+      <h3>Submit your Email & Get a Free Novella!</h3>
       <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="0b3811bb-6a63-43f9-bfc5-678514592bd5">
         
@@ -101,6 +101,9 @@
   
         <button type="submit">Send Message</button>
       </form>
+          <!-- Fine Print -->
+    <p class="fine-print">Your email and message will not be shared with anyone besides the author.</p>
+  </form>
     </div>
   </div>  
 
@@ -195,7 +198,7 @@
     </script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-      const emailForm = document.querySelector(".Email-Submit form");
+      const emailForm = document.querySelector(".Email-Submit form, form");
       if (!emailForm) return;
   
       const emailInput = emailForm.querySelector("input[type='email']");
